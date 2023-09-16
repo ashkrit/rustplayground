@@ -2,7 +2,6 @@ fn main() {
     let tree = sled::open("/Users/ashkrit/_tmp/welcome-to-sled")
         .expect("open");
 
-    //generate value from 1 to 10
 
     let no_of_items = 100;
     for i in 1..no_of_items {
