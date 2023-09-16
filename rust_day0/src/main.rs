@@ -1,4 +1,4 @@
-
+use std::thread;
 
 #[derive(Debug)]
 enum Cereal{
@@ -8,8 +8,8 @@ enum Cereal{
 
 fn main() {
 
-    simple_dereference();
-
+    //simple_dereference();
+    //threads();
 }
 
 fn simple_dereference() {
@@ -25,7 +25,13 @@ fn simple_dereference() {
 }
 
 fn threads() {
-    let data =100;
+    let mut data =100;
+
+    thread::spawn(|| {data =200});
+    thread::spawn(|| {data =300});
+
+    println!("{}", data);
+
 }
 
 
