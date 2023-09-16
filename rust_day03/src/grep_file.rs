@@ -28,7 +28,7 @@ pub fn main() {
     }
 }
 
-fn process_lines<T:BufRead>(reader: T, re: Regex) {
+fn process_lines<T:BufRead>(reader: T, re: Regex)  {
     for line_ in reader.lines() {
         let line = line_.unwrap();
         match re.find(&line) {
