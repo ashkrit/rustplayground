@@ -19,6 +19,29 @@ fn main() {
     println!("{}", floats);
     println!("{:?}", total_duration);
 
+    let search_term = "third";
+    let content = "\
+first line
+second line
+third line
+fourth line
+    ";
+
+    let mut line_num = 0;
+    for line in content.lines() {
+        if line.contains(search_term) {
+            println!("Found: {} at line {}", line, line_num+1);
+        }
+        line_num += 1;
+    }
+
+    for (index, line) in content.lines().enumerate() {
+        if line.contains(search_term) {
+            println!("Found: {} at line {}", line, index + 1);
+        }
+    }
+
+
 }
 
 fn sum(a: i32, b: i32) -> i32 {
