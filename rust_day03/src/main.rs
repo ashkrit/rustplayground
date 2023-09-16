@@ -1,7 +1,9 @@
 mod vectors;
+mod regex;
 
 fn main() {
 
-    vectors::main();
+    //vectors::main();
+    regex::main();
 
 }
